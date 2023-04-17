@@ -1,13 +1,45 @@
 ---
+const pageTitle = 'About me'
+
+const identity = {
+  firstName : 'Ludo',
+  country : 'lille',
+  occupation : 'dev front',
+  hobby : ['musique', 'lecture', 'velo']
+}
+
+const skills = ['html', 'css', 'javascript', 'React' , 'Astro' , 'nextjs']
+
+const happy = true;
+const finished = true;
+const goal = 2
+
 ---
 <html lang="en">
   <head>
-    <title>AboutPAge</title>
+    <meta charset ="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{pageTitle}</title>
   </head>
   <body>
       <a href="/">Home</a>
       <a href="/about">About</a>
       <a href="/blog">Blog</a>
-    <h1>Welcome to About Page</h1>
+    <h1>Welcome to {pageTitle}</h1>
+    <ul>
+     <li> mon nom est {identity.firstName}</li>
+     {identity.hobby.length >= 2 && 
+    <li> mes loisirs sont : {identity.hobby[0]} et {identity.hobby[1]}</li>
+    }
+    </ul>
+    <p>mes skills sont</p>
+    <ul>
+      {skills.map(skill => <li>{skill}</li>)}
+    </ul>
+
+    {happy && <p>i am happy to be learning Astro</p>}
+    {finished && <p>I finshes this tutoriel</p>}
+
+    {goal ===3 ? <p> my goal is the fished 3 days</p> : <p> not fiinished à temps</p>}
   </body>
 </html>
