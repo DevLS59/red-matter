@@ -1,32 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 ---
+<html lang="en">
+  <head>
+    <title>My Homepage</title>
+  </head>
+  <body>
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Bienvenue <span class="text-gradient">Astro site</span></h1>
-		
-	</main>
-</Layout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	
-</style>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/blog">Blog</a>
+    
+    <h1>Welcome to my website!</h1>
+  </body>
+</html>
