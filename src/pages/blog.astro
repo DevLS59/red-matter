@@ -1,10 +1,11 @@
 ---
 
 import Header from '../components/Header.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 import '../styles/global.css'
 
-const pageTitle = 'blog'
+const pageTitle = 'blog page'
 ---
 <html>
     <head>
@@ -13,19 +14,17 @@ const pageTitle = 'blog'
     <title>{pageTitle}</title>
   </head>
   <body>
-  <Header />
-
-    <h1>Welcome to {pageTitle} Page</h1>
-
-    <ul>
-      <li><a href="/posts/post-1">Post 1</a></li>
-      <li><a href="/posts/post-2">Post 2</a></li>
-      <li><a href="/posts/post-3">Post 3</a></li>
-    </ul>
+ 
 
 
-    <script>
-      import '../scripts/menu'
-    </script>
+    <BaseLayout pageTitle={pageTitle}>
+
+      <h1>Welcome to {pageTitle} Page</h1>
+      <ul>
+        <li><a href="/posts/post-1">Post 1</a></li>
+        <li><a href="/posts/post-2">Post 2</a></li>
+        <li><a href="/posts/post-3">Post 3</a></li>
+      </ul>
+    </BaseLayout>
   </body>
 </html>
