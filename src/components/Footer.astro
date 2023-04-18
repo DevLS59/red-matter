@@ -6,7 +6,7 @@ import Social from "./Social.astro";
 ---
 
 <style>
-  footer {
+  .container-social{
     display : flex;
     gap : 1rem;
     margin-top : 2rem;
@@ -14,8 +14,10 @@ import Social from "./Social.astro";
 </style>
 <footer>
   <p>voir le projet sur</p>
-  
-  <Social platform="twitter" username="astrodobuild"/>"
-  <Social platform="github" username="widthastro"/>"
-  <Social platform="youtube" username="widthastro"/>"
+  <div class="container-social">
+    <Social platform="twitter" username="astrodobuild"/>"
+    <Social platform="github" username="widthastro"/>"
+    <Social platform="youtube" username="widthastro"/>"
+
+  </div>
 </footer>
